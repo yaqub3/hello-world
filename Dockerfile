@@ -1,6 +1,5 @@
 FROM ubuntu:latest
-RUN apt-get upgrade -y
-RUN apt-get update -y
-RUN apt-get install default-jdk
+RUN apt-get update && \
+    apt-get install -y default-jdk
 CMD echo pwd
 EXPOSE 80
